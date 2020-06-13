@@ -15,7 +15,7 @@
 //  * @return {number[]}
 //  */
 
-//1) Brute Force 
+//1) Brute Force  
 //Time O(n^2)
 //Space O(1)
 var twoSum = function(nums, target) {
@@ -38,4 +38,4 @@ var twoSum = function(nums, target) {
             return [hash[complement], i]
         }
     }
-};
+}

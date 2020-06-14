@@ -16,7 +16,7 @@
 
 
 //Time O(n^2)
-//Space O(n)
+//Space O(logn) or O(n) depending on sorting algorithm
 var threeSum = function(nums) {
     nums = nums.sort((a,b) => a-b)
 

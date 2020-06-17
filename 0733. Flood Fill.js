@@ -42,6 +42,7 @@ var floodFill = function(image, sr, sc, newColor, oldColor = image[sr][sc]) {
 //2) BFS
 var floodFill = function(image, sr, sc, newColor) {
     let oldColor = image[sr][sc];
+    
     if (oldColor === newColor) return image;
     
     const queue = [[sr,sc]]

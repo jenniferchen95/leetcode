@@ -66,19 +66,18 @@ var wordBreak = function(s, wordDict) {
 }
 
 //3) DP
-//Time
-//Space
+//Time O(n^2)
+//Space O(n)
 
 var wordBreak = function(s, wordDict) {
-    let dp = new Array(s.length + 1).fill(false);
+    let dp = new Array(s.length + 1).fill(false)
     dp[0] = true
 
     for (let i = 1; i <= s.length; i++) {
         for (let j = 0; j < i; j++) {
-            if (dp[j] === true && wordDict.includes(s.slice(j,i))) {
-                dp[i] = true;
-                break;
-            }
+            if (dp[j] === true && wordDict.includes(s.substring(j,i))) 
+            dp[i] = true;
+            break;
         }
     }
     return dp[s.length]

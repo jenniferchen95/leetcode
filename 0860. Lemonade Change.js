@@ -54,7 +54,7 @@ var lemonadeChange = function(bills) {
             } else if (fives >= 3) {
                 fives -= 3
             } else {
-            return false
+                return false
             }
         }
     }

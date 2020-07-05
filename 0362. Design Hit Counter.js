@@ -1,5 +1,5 @@
-//O(1)
-//O(1)
+//Time O(1) - hit/gethits
+//Space O(1) - size of queue which is max 300 = O(1)
 
 var HitCounter = function() {
     this.queue = []

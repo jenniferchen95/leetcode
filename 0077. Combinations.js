@@ -13,9 +13,6 @@
 //   [1,4],
 // ]
 
-
-//Time
-//Space
 var combine = function(n, k) {
     let res = []
     

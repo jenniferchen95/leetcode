@@ -18,7 +18,7 @@
 // 9   6 3   1
 
 //1) Recursion
-//Time O(m)
+//Time O(n)
 //Space O(n)
 var invertTree = function(root) {
     if (!root) return root;

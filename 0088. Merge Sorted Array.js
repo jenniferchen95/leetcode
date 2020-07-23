@@ -29,10 +29,10 @@ var merge = function(nums1, m, nums2, n) {
         }
         end--
     }
-    if (n2 >= 0) {
-        for (let i = n2; i >= 0; i--) {
-            nums1[i] = nums2[n2]
-            n2--
-        }
+    
+    for (let i = n2; i >= 0; i--) {
+        nums1[i] = nums2[n2]
+        n2--
     }
+    
 };

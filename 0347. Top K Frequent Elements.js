@@ -16,7 +16,7 @@
 // You can return the answer in any order.
 
 
-//1) Bucket Sort
+//Bucket Sort
 //Time O(n)
 //Space O(n)
 
@@ -43,7 +43,3 @@ var topKFrequent = function(nums, k) {
         }
     }
 };
-
-//2) Quick Select
-//Time O(n) worst O(n^2)
-//Space O(n)

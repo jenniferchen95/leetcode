@@ -21,7 +21,6 @@
 // Note: The input will be a non-empty word consisting of uppercase and lowercase latin letters.
 
 
-
 //Time O(n)
 //Space O(1)
 var detectCapitalUse = function(word) {

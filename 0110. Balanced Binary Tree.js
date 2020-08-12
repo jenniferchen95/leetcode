@@ -28,7 +28,7 @@
 //  4   4
 // Return false.
 
-//1
+//1) Dfs
 //Time O(n)
 //Space O(h)
 var isBalanced = function(root) {

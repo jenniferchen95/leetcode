@@ -5,6 +5,41 @@ class AncestralTree {
     }
   }
 
+//1) Optimized Space
+//Time O(n)
+//Space O(1)
+function getYoungestCommonAncestor(topAncestor, descendantOne, descendantTwo) {
+    let one = getDepth(descendantOne)
+    let two = getDepth(descendantTwo)
+    if (one > two) {
+        while (one > two) {
+            one--
+            descendantOne = descendantOne.ancestor
+        }
+    }
+    if (two > one) {
+        while (two > one) {
+            two--
+            descendantTwo = descendantTwo.ancestor
+        }
+    }
+    while (descendantOne !== descendantTwo) {
+        descendantOne = descendantOne.ancestor
+        descendantTwo = descendantTwo.ancestor
+    }
+    return descendantOne
+    
+    function getDepth(descendant) {
+        let depth = 0
+        while (descendant.ancestor) {
+            depth++
+            descendant = descendant.ancestor
+        }
+        return depth
+    }
+}
+
+//2)
 function getYoungestCommonAncestor(topAncestor, descendantOne, descendantTwo) {
     let oneList = getAncestors(descendantOne)
     let twoList = getAncestors(descendantTwo)

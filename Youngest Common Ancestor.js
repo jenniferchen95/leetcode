@@ -6,7 +6,7 @@ class AncestralTree {
   }
 
 //1) Optimized Space
-//Time O(n)
+//Time O(d) - d is depth (height) of tree
 //Space O(1)
 function getYoungestCommonAncestor(topAncestor, descendantOne, descendantTwo) {
     let one = getDepth(descendantOne)
@@ -39,7 +39,29 @@ function getYoungestCommonAncestor(topAncestor, descendantOne, descendantTwo) {
     }
 }
 
-//2)
+//2) Trading Space for Time
+//Time O(D1 + D2) - where D1 is distance from LCA to first node 
+//Space O(D1 + D2)
+function getYoungestCommonAncestor(topAncestor, descendantOne, descendantTwo) {
+    let set = new Set()
+      while (descendantOne || descendantTwo) {
+          if (set.has(descendantOne)) return descendantOne
+          if (set.has(descendantTwo)) return descendantTwo
+  
+          if (descendantOne && !set.has(descendantOne)) {
+              set.add(descendantOne)
+              descendantOne = descendantOne.ancestor
+          }
+          if (descendantTwo && !set.has(descendantTwo)) {
+              set.add(descendantTwo) 
+              descendantTwo = descendantTwo.ancestor
+          }
+      }
+  }
+
+
+
+//3)
 function getYoungestCommonAncestor(topAncestor, descendantOne, descendantTwo) {
     let oneList = getAncestors(descendantOne)
     let twoList = getAncestors(descendantTwo)

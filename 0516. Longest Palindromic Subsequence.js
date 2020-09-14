@@ -22,6 +22,7 @@
 // 1 <= s.length <= 1000
 // s consists only of lowercase English letters.
 
+//Dynamic Programming
 //Time O(n^2)
 //Space O(n^2)
 var longestPalindromeSubseq = function(s) {

@@ -19,6 +19,7 @@
 // Input: matrix = [[1,2],[3,4]]
 // Output: [[3,1],[4,2]]
 
+//1) Reverse and Transpose (Swapping rows and columns)
 //Time O(n^2)
 //Space O(1) - in place
 var rotate = function(matrix) {
@@ -26,6 +27,27 @@ var rotate = function(matrix) {
     for (let i = 0; i < matrix.length; i++) {
         for (let j = 0; j < i; j++) {
             [matrix[i][j], matrix[j][i]] = [matrix[j][i], matrix[i][j]]
+        }
+    }
+};
+
+//2) Rotating in place
+//Time O(n^2)
+//Space O(1)
+var rotate = function(matrix) {
+    let size = matrix.length-1
+    
+    for (let layer = 0; layer < Math.floor(matrix.length/2); layer++) {
+        for (let i = layer; i < size-layer; i++) {
+            let top = matrix[layer][i]
+            let right = matrix[i][size-layer]
+            let bottom = matrix[size-layer][size-i]
+            let left = matrix[size-i][layer]
+            
+            matrix[layer][i] = left
+            matrix[i][size-layer] = top
+            matrix[size-layer][size-i] = right
+            matrix[size-i][layer] = bottom
         }
     }
 };

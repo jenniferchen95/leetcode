@@ -1,3 +1,6 @@
+//Time O(n) - Number of nodes in BST
+//Space O(n)
+
 function inOrderTraverse(tree, array) {
 	if (tree.left) inOrderTraverse(tree.left, array)
 	array.push(tree.value)

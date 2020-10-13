@@ -15,7 +15,7 @@
 // ]
 
 //Time O(ab) - a being the total number of strings and b being the longest length string
-//Space O(n) - n being space required for hash
+//Space O(n) - n being gispace required for hash
 var groupStrings = function(strings) {
     let res = []
     let hash = {}

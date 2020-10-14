@@ -35,9 +35,23 @@
 // s consists of English letters (lower-case and upper-case), ',' and '.'.
 // 1 <= numRows <= 1000
 
-
 //Time O(n)
 //Space O(n)
+
+var convert = function(s, numRows) {
+    if (numRows === 1) return s
+    let res = new Array(numRows).fill([]).map(_=>[])
+    let index = 0, step = 1
+    
+    for (let c of s) {
+        res[index] += c
+        if (index === 0) step = 1
+        else if (index === numRows-1) step = -1
+        index += step
+    }
+    return res.join("")                                        
+};
+
 var convert = function(s, numRows) {
     if (numRows === 1) return s
     let res = new Array(numRows).fill([]).map(_=>[])

@@ -14,6 +14,7 @@
 
 // S will consist of lowercase letters and have length in range [1, 500].
 
+//Sorting
 //Time O(n) -> Since alphabet is fixed at 26 characters sorting is O(1)
 //Space O(1) -> Same as above
 var reorganizeString = function(s) {

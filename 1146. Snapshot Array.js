@@ -27,7 +27,11 @@
 // 0 <= snap_id < (the total number of times we call snap())
 // 0 <= val <= 10^9
 
-
+//Time
+    // Set O(1)
+    // Snap O(1)
+    // Get O(snap_id) 
+//Space O(n)
 var SnapshotArray = function(length) {
     this.arr = []
     this.snapId = 0

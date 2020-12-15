@@ -29,7 +29,6 @@
 // Input: candidates = [1], target = 2
 // Output: [[1,1]]
 
-//Time O
 var combinationSum = function(candidates, target) {
     let res = []
     helper(0, target, [])

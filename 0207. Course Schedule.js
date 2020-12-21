@@ -25,7 +25,7 @@
 // You may assume that there are no duplicate edges in the input prerequisites.
 // 1 <= numCourses <= 10^5
 
-//Time O(E+V)
+//Time O(E+V) - edges + vertices
 //Space O(E+V)
 var canFinish = function(numCourses, prerequisites) {
     let graph = new Map();

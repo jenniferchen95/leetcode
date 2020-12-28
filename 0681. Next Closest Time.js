@@ -12,7 +12,7 @@ var nextClosestTime = function(time) {
     res[3] = findNext(res[3], '5')
     if (res[3] > time[3]) return res.join("")
     
-    let limit = res[0] === '2' ? '4' : '9'
+    let limit = res[0] === '2' ? '3' : '9'
     res[1] = findNext(res[1], limit)
     if (res[1] > time[1]) return res.join("")
     

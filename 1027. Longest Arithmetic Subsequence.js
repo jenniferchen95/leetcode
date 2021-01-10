@@ -29,7 +29,7 @@
 //Time O(n^2)
 //Space O(n^2)
 var longestArithSeqLength = function(A) {
-    let dp = new Array(A.length)
+    let dp = new Array(A.length).fill(0)
     let max = 2
     
     for (let i = 0; i < A.length; i++) {
